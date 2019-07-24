@@ -4,18 +4,25 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
-public class Player : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
-    [Tooltip("In ms^-1")][SerializeField] float speed = 60f;
+    // todo work-out why start speed is very fast
+
+    [Header("General")]
+    [Tooltip("In ms^-1")][SerializeField] float controlSpeed = 60f;
     [Tooltip("In m")][SerializeField] float xRange = 15f;
     [Tooltip("In m")][SerializeField] float yRange = 10f;
 
+    [Header("Screen-position Based")]
     [SerializeField] float positionPitchFactor = -1.5f;
-    [SerializeField] float controlPitchFactor = -15f;
     [SerializeField] float positionYawFactor = 1.5f;
+
+    [Header("Control-throw Based")]
+    [SerializeField] float controlPitchFactor = -15f;
     [SerializeField] float controlRollFactor = -15f;
 
     float xThrow, yThrow;
+    bool isControllEnabled = true;
 
     // Start is called before the first frame update
     void Start()
@@ -26,8 +33,16 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ProcessTranslation();
-        ProcessRotation();
+        if(isControllEnabled)
+        {
+            ProcessTranslation();
+            ProcessRotation();
+        }      
+    }
+
+    void OnPlayerDeath() // called by string reference
+    {
+        isControllEnabled = false;
     }
 
     private void ProcessRotation()
@@ -47,8 +62,8 @@ public class Player : MonoBehaviour
         xThrow = CrossPlatformInputManager.GetAxis("Horizontal");
         yThrow = CrossPlatformInputManager.GetAxis("Vertical");
 
-        float xOffset = xThrow * speed * Time.deltaTime;
-        float yOffset = yThrow * speed * Time.deltaTime;
+        float xOffset = xThrow * controlSpeed * Time.deltaTime;
+        float yOffset = yThrow * controlSpeed * Time.deltaTime;
 
         float rawXPos = transform.localPosition.x + xOffset;
         float clampedXPos = Mathf.Clamp(rawXPos, -xRange, xRange);
