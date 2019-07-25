@@ -20,11 +20,10 @@ public class CollisionHandler : MonoBehaviour
     private void StartDeathSequence()
     {
         SendMessage("OnPlayerDeath");
-
     }
 
     private void ReloadScene() // string reference
     {
-        SceneManager.LoadScene(1);
+        //SceneManager.LoadScene(1); // comment to testing
     }
 }
