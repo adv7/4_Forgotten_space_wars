@@ -893,8 +893,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 972591637}
-  - component: {fileID: 972591639}
-  - component: {fileID: 972591638}
   m_Layer: 0
   m_Name: Master_Timeline
   m_TagString: Untagged
@@ -916,46 +914,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &972591638
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 972591636}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!320 &972591639
-PlayableDirector:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 972591636}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: c6fa5ce2ae2e8554da8a0c86ea4840a7, type: 2}
-  m_InitialState: 1
-  m_WrapMode: 2
-  m_DirectorUpdateMode: 1
-  m_InitialTime: 0
-  m_SceneBindings:
-  - key: {fileID: 0}
-    value: {fileID: 963194229}
-  - key: {fileID: -5850244869553769002, guid: c6fa5ce2ae2e8554da8a0c86ea4840a7, type: 2}
-    value: {fileID: 963194229}
-  m_ExposedReferences:
-    m_References: []
 --- !u!4 &976216692 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5264191233184010490, guid: fbd8d8d4f134409478ae2f81c7b6ef83,
