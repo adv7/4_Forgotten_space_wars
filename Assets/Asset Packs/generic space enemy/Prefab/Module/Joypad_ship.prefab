@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 4990607877152018}
   - component: {fileID: 33830965679388596}
   - component: {fileID: 23413581245250402}
-  - component: {fileID: 1491722930199616340}
+  - component: {fileID: 1646421320}
   m_Layer: 0
-  m_Name: Ship_03
+  m_Name: Joypad_ship
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -78,16 +78,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &1491722930199616340
-BoxCollider:
+--- !u!114 &1646421320
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1074994750746910}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.64664847, y: 0.63312775, z: 0.09151077}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d0e4c6958fb6d94f9fea15441c3ef4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathFX: {fileID: 4076279643793899111, guid: 05934728054dd6d45afce54a6e36d5df, type: 3}
+  parent: {fileID: 0}
+  scorePerHit: 50
+  hits: 10
