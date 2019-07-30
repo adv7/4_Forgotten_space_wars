@@ -44,7 +44,7 @@ public class PlayerController : MonoBehaviour
 
     void OnPlayerDeath() // called by string reference
     {
-        //isControllEnabled = false; // comment to testing
+        isControllEnabled = false; // comment to testing
     }
 
     private void ProcessRotation()

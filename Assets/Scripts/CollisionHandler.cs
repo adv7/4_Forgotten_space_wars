@@ -24,6 +24,6 @@ public class CollisionHandler : MonoBehaviour
 
     private void ReloadScene() // string reference
     {
-        //SceneManager.LoadScene(1); // comment to testing
+        SceneManager.LoadScene(1); // comment to testing
     }
 }
